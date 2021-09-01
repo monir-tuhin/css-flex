@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Layout</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: antiquewhite;
+            padding: 10px;
+        }
+        .main {
+            background: aqua;
+            padding: 10px;
+        }
+        .aside {
+            background: burlywood;
+            padding: 10px;
+        }
+        .menu {
+            background: aquamarine;
+            padding: 10px;
+        }
+        .footer {
+            background: darkcyan;
+            padding: 10px;
+        }
+
+        @media (min-width: 700px) {
+            .container2 {
+                display: flex;
+                flex-direction: row;
+                order: 2;
+            }
+            .main {
+                flex-basis: 75%;
+            }
+            .aside {
+                flex-basis: 25%;
+            }
+            .footer {
+                order: 5;
+            }
+            .menu {
+                order: 1;
+            }
+            .header {
+                order: 1;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>This is header</h1>
+    </div>
+   <div class="container2">
+       <div class="main">
+           <h2>This is main</h2>
+           <p>
+               In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form
+               of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before
+               final copy is available.
+           </p>
+       </div>
+       <div class="aside">
+           <h2>This is aside</h2>
+           <p>
+               In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form
+               of a document or a typeface without relying on meaningful content
+           </p>
+       </div>
+   </div>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="footer">
+        <span>Copyright @ 2021</span>
+    </div>
+</div>
+
+</body>
+</html>
